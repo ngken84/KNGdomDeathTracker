@@ -7,7 +7,6 @@ import joker.persona.ngrocken.kngdomdeathtracker.model.effects.RollResult;
 
 public class DummyDataCreator {
 
-
     public static Innovation createForbiddenDanceInnovation() {
         Innovation card = new Innovation("Forbidden Dance", "", "music", "drums", 0);
         Effect bonus = new Effect(Effect.GamePhase.SHOWDOWN, "When a survivor uses the <b>Synchronized Strike</b> secret fighting art, reroll missed attack rolls once.");
@@ -19,7 +18,16 @@ public class DummyDataCreator {
         event.addAllRollResults(rollOne, rollTwo, rollThree);
         card.addEndeavorEvent(event);
         return card;
+    }
 
+    public static Innovation createFamilyInnovation() {
+        Innovation card = new Innovation("Family", "", "home", "hovel", 0);
+        card.addEffect(createDepartingSurvivalEffect());
+        return card;
+    }
+
+    public static Effect createDepartingSurvivalEffect() {
+        return new Effect(Effect.GamePhase.HUNT, "<b>Departing Survivors</b> gain +{{v}} survival", 1);
     }
 
 }

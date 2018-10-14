@@ -7,7 +7,7 @@ public class EndeavorEvent {
 
     private int endeavorCost;
     private String description;
-    private List<RollResult> resultList;
+    private List<RollResult> resultList = new LinkedList<>();
 
 
     public EndeavorEvent(int endeavorCost, String description) {
@@ -28,9 +28,6 @@ public class EndeavorEvent {
     }
 
     public void addRollResult(RollResult result) {
-        if(resultList == null) {
-            resultList = new LinkedList<>();
-        }
         resultList.add(result);
     }
 
