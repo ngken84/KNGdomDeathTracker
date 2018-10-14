@@ -33,4 +33,10 @@ public class EndeavorEvent {
         }
         resultList.add(result);
     }
+
+    public void addAllRollResults(RollResult... rollResults) {
+        for(RollResult result : rollResults) {
+            addRollResult(result);
+        }
+    }
 }

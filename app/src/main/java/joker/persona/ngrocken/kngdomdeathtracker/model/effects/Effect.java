@@ -16,6 +16,12 @@ public class Effect {
         this.effectValue = effectValue;
     }
 
+    public Effect(GamePhase effectPhase, String effectText) {
+        this.effectPhase = effectPhase;
+        this.effectText = effectText;
+        this.effectValue = 0;
+    }
+
     public GamePhase getEffectPhase() {
         return effectPhase;
     }

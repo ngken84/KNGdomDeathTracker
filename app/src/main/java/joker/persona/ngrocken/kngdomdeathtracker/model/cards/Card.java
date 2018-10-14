@@ -6,8 +6,11 @@ public abstract class Card {
         INNOVATION
     }
 
+    public static final String SET_DEFAULT = "DEFAULT";
+
     protected String name;
     protected String description;
+    protected String cardSet = SET_DEFAULT;
 
     public String getName() {
         return name;
@@ -26,4 +29,12 @@ public abstract class Card {
     }
 
     public abstract CardType getCardType();
+
+    public String getCardSet() {
+        return cardSet;
+    }
+
+    public void setCardSet(String cardSet) {
+        this.cardSet = cardSet;
+    }
 }
