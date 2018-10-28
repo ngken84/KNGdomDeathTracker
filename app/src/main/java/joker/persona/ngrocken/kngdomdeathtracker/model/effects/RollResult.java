@@ -1,5 +1,7 @@
 package joker.persona.ngrocken.kngdomdeathtracker.model.effects;
 
+import java.util.Comparator;
+
 public class RollResult {
 
     private int minRoll;
@@ -22,5 +24,13 @@ public class RollResult {
 
     public String getResultDesc() {
         return resultDesc;
+    }
+
+    public static class RollResultComparator implements Comparator<RollResult> {
+
+        @Override
+        public int compare(RollResult rollResult, RollResult t1) {
+            return rollResult.getMinRoll() - t1.getMinRoll();
+        }
     }
 }

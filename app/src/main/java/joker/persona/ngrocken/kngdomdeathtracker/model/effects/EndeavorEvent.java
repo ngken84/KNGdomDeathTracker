@@ -1,5 +1,6 @@
 package joker.persona.ngrocken.kngdomdeathtracker.model.effects;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -29,11 +30,13 @@ public class EndeavorEvent {
 
     public void addRollResult(RollResult result) {
         resultList.add(result);
+        Collections.sort(resultList, new RollResult.RollResultComparator());
     }
 
     public void addAllRollResults(RollResult... rollResults) {
         for(RollResult result : rollResults) {
-            addRollResult(result);
+            resultList.add(result);
         }
+        Collections.sort(resultList, new RollResult.RollResultComparator());
     }
 }
