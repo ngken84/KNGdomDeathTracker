@@ -3,7 +3,7 @@ package joker.persona.ngrocken.kngdomdeathtracker.model.effects;
 public class Effect {
 
     public enum GamePhase {
-        SETTLEMENT, SHOWDOWN, HUNT, ALL
+        SETTLEMENT, SHOWDOWN, HUNT, ALL, HUNT_SHOWDOWN
     }
 
     private GamePhase effectPhase;

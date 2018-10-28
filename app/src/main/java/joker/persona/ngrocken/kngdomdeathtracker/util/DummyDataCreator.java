@@ -28,7 +28,71 @@ public class DummyDataCreator {
                 "<b>intimacy</b> may give themselves a surname if they do not have one.<br>A newborn " +
                 "survivor inherits the surname of one parent, their weapon type, and half " +
                 "(rounded-down) of their weapon proficiency levels.", 0));
+        return card;
+    }
 
+    public static Innovation createGravesInnovation() {
+        Innovation card = new Innovation("Graves", "", "death principle", null, 0);
+        card.addEffect(new Effect(Effect.GamePhase.SETTLEMENT, "All new survivors gain " +
+                "+{{v}} understanding.", 1));
+        card.addEffect(new Effect(Effect.GamePhase.HUNT_SHOWDOWN, "When a survivor dies " +
+                "during the hunt or showdown phase, gain +2{{e}}"));
+        card.addEffect(new Effect(Effect.GamePhase.SETTLEMENT, "When a survivor dies during " +
+                "the settlement phase, gain +1{{e}}."));
+        return card;
+    }
+
+    public static Innovation createSymposiumInnovation() {
+        Innovation card = new Innovation("Symposium", "", "education", "language", 1);
+        card.addEffect(new Effect(Effect.GamePhase.SETTLEMENT, "When a survivor innovates, " +
+                "draw an additional 2 innovation Cards to choose from."));
+        return card;
+    }
+
+    public static Innovation createBedInnovation() {
+        Innovation card = new Innovation("Bed", "", "home", "hovel", 1);
+        EndeavorEvent event = new EndeavorEvent(1, "Rest - roll 1d10");
+        RollResult result1 = new RollResult(1,3, "Nightmares. Gain +1 insanity");
+        RollResult result2 = new RollResult(4, 0, "You cannot endeavor again" +
+                " this settlement phase. Skip the next hunt. You may remove on of the following: <br><br>" +
+                " - All <b>Broken Arm</b> severe injuries. <br>" +
+                " - All <b>Broken Hip</b> severe injuries. <br>" +
+                ""); // TO-DO : finish this one
+        event.addAllRollResults(result1, result2);
+        card.addEndeavorEvent(event);
+        return card;
+    }
+
+    //TO-DO Add Endeavor Event
+    public static Innovation createScarificationInnovation() {
+        Innovation card = new Innovation("Scarification", "", "faith", "inner lantern", 0);
+        return card;
+    }
+
+    //TO-DO Add Endeavor Events
+    public static Innovation createFacePaintingInnovation() {
+        Innovation card = new Innovation("Face Painting", "", "art", "paint", 0);
+        return card;
+    }
+
+    //TO-DO Add Effect
+    public static Innovation createSagaInnovation() {
+        Innovation card = new Innovation("Saga", "A telling of the settlement's " +
+                "survival set to a soft rhythmic beating of drums.", "music",
+                "song of the brave", 0);
+        return card;
+    }
+
+    //TO-DO Add Effect
+    public static Innovation createClanOfDeathInnovation() {
+        Innovation card = new Innovation("Clan of Death", "The enduring strength of " +
+                "your clan passes through generations.", "home", "family", 0);
+        return card;
+    }
+
+    //TO-DO Add Event
+    public static Innovation createBloodlettingInnovation() {
+        Innovation card = new Innovation("Bloodletting", "", "science", "ammonia", 0);
         return card;
     }
 
