@@ -10,5 +10,6 @@ public class InnovationDeck {
     public void addInnovationCards(Innovation... cards) {
         allCardList.addAll(Arrays.asList(cards));
     }
+    
 
 }

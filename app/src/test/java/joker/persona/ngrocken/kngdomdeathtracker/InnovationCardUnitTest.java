@@ -5,6 +5,7 @@ import org.junit.Test;
 import joker.persona.ngrocken.kngdomdeathtracker.model.cards.Card;
 import joker.persona.ngrocken.kngdomdeathtracker.model.cards.Innovation;
 import joker.persona.ngrocken.kngdomdeathtracker.model.effects.Effect;
+import joker.persona.ngrocken.kngdomdeathtracker.model.effects.RollResult;
 
 import static org.junit.Assert.assertEquals;
 
@@ -41,6 +42,14 @@ public class InnovationCardUnitTest {
         testInn.addEffect(testEffect);
         assertEquals(testInn.getEffectList().size(), 1);
         assertEquals(testInn.getEffectList().get(0), testEffect);
+    }
+
+    @Test
+    public void innovation_AddRollResultIsAdded() {
+        Innovation testInn = createFamilyInnovationCard();
+
+        RollResult result = new RollResult(1, 3, "Test RollResult");
+
     }
 
 }
