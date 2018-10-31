@@ -3,6 +3,7 @@ package joker.persona.ngrocken.kngdomdeathtracker.model.cards;
 import java.util.LinkedList;
 import java.util.List;
 
+import joker.persona.ngrocken.kngdomdeathtracker.model.abilities.SurvivalAction;
 import joker.persona.ngrocken.kngdomdeathtracker.model.effects.Effect;
 import joker.persona.ngrocken.kngdomdeathtracker.model.effects.EndeavorEvent;
 
@@ -13,7 +14,7 @@ public class Innovation extends Card {
     private int survivalLimitBonus;
     private List<Effect> effectList = new LinkedList<>();
     private List<EndeavorEvent> endEventList = new LinkedList<>();
-    
+    private SurvivalAction survivalAction;
 
     public Innovation(String name, String description, String category, String consequenceOf, int survivalLimitBonus) {
         this.name = name;
@@ -64,6 +65,11 @@ public class Innovation extends Card {
         }
     }
 
+    public SurvivalAction getSurvivalAction() {
+        return survivalAction;
+    }
 
-
+    public void setSurvivalAction(SurvivalAction survivalAction) {
+        this.survivalAction = survivalAction;
+    }
 }

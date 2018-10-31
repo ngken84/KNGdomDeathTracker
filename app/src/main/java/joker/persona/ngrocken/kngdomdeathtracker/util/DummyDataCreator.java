@@ -92,9 +92,55 @@ public class DummyDataCreator {
 
     //TO-DO Add Event
     public static Innovation createBloodlettingInnovation() {
-        Innovation card = new Innovation("Bloodletting", "", "science", "ammonia", 0);
+        Innovation card = new Innovation("Bloodletting", null, "science", "ammonia", 0);
         return card;
     }
+
+    //TO-DO Add Event
+    public static Innovation createShrineInnovation() {
+        Innovation card = new Innovation("Shrine",
+                "May be used once per settlement phase.", "faith",
+                "inner lantern", 0);
+        return card;
+    }
+
+    //TO-DO Add Survival Action
+    public static Innovation createInnerLanternInnovation() {
+        Innovation card = new Innovation("Inner Lantern", "The settlement finds the " +
+                "light within. All survivors gain the <b>Surge</b> survival action.",
+                "faith", "language", 0);
+        return card;
+    }
+
+    //TO-DO Add Survival Action
+    public static Innovation createLanguageInnovation() {
+        Innovation card = new Innovation("Language", "All survivors gain the " +
+                "<b>Encourage</b> survival action.", "starting innovation",
+                null, 1);
+        return card;
+    }
+
+    //TO-DO Add Event
+    public static Innovation  createPartnershipInnovation() {
+        Innovation card = new Innovation("Partnership", null, "home", "hovel", 0);
+        return card;
+    }
+
+    //TO-DO Add Effect
+    public static Innovation createHovelInnovation() {
+        Innovation card = new Innovation("Hovel",
+                "The settlement accepts this nightmarish landscape as their home.",
+                "home", "language", 1);
+        return card;
+    }
+
+    public static Innovation createAmmoniaInnovation() {
+        Innovation card = new Innovation("Ammonia", "A pungent, billious substance ideal for crafting leather and treating wounds.", "science", "language", 0);
+        card.addEffect(createDepartingSurvivalEffect());
+        return card;
+    }
+
+
 
     public static Effect createDepartingSurvivalEffect() {
         return new Effect(Effect.GamePhase.HUNT, "<b>Departing Survivors</b> gain +{{v}} survival", 1);

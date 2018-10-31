@@ -2,12 +2,14 @@ package joker.persona.ngrocken.kngdomdeathtracker;
 
 import org.junit.Test;
 
+import joker.persona.ngrocken.kngdomdeathtracker.model.abilities.SurvivalAction;
 import joker.persona.ngrocken.kngdomdeathtracker.model.cards.Card;
 import joker.persona.ngrocken.kngdomdeathtracker.model.cards.Innovation;
 import joker.persona.ngrocken.kngdomdeathtracker.model.effects.Effect;
 import joker.persona.ngrocken.kngdomdeathtracker.model.effects.RollResult;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class InnovationCardUnitTest {
 
@@ -45,11 +47,12 @@ public class InnovationCardUnitTest {
     }
 
     @Test
-    public void innovation_AddRollResultIsAdded() {
+    public void innovation_AddSurvivalAction() {
         Innovation testInn = createFamilyInnovationCard();
-
-        RollResult result = new RollResult(1, 3, "Test RollResult");
-
+        assertNull(testInn.getSurvivalAction());
+        SurvivalAction action = new SurvivalAction("Test", "Test");
+        testInn.setSurvivalAction(action);
+        assertEquals(testInn.getSurvivalAction(), action);
     }
 
 }
