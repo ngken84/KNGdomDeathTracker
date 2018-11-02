@@ -65,13 +65,15 @@ public class DummyDataCreator {
 
     //TO-DO Add Endeavor Event
     public static Innovation createScarificationInnovation() {
-        Innovation card = new Innovation("Scarification", "", "faith", "inner lantern", 0);
+        Innovation card = new Innovation("Scarification", "", "faith",
+                "inner lantern", 0);
         return card;
     }
 
     //TO-DO Add Endeavor Events
     public static Innovation createFacePaintingInnovation() {
-        Innovation card = new Innovation("Face Painting", "", "art", "paint", 0);
+        Innovation card = new Innovation("Face Painting", "", "art",
+                "paint", 0);
         return card;
     }
 
@@ -92,7 +94,8 @@ public class DummyDataCreator {
 
     //TO-DO Add Event
     public static Innovation createBloodlettingInnovation() {
-        Innovation card = new Innovation("Bloodletting", null, "science", "ammonia", 0);
+        Innovation card = new Innovation("Bloodletting", null, "science",
+                "ammonia", 0);
         return card;
     }
 
@@ -122,7 +125,8 @@ public class DummyDataCreator {
 
     //TO-DO Add Event
     public static Innovation  createPartnershipInnovation() {
-        Innovation card = new Innovation("Partnership", null, "home", "hovel", 0);
+        Innovation card = new Innovation("Partnership", null, "home",
+                "hovel", 0);
         return card;
     }
 
@@ -135,12 +139,190 @@ public class DummyDataCreator {
     }
 
     public static Innovation createAmmoniaInnovation() {
-        Innovation card = new Innovation("Ammonia", "A pungent, billious substance ideal for crafting leather and treating wounds.", "science", "language", 0);
+        Innovation card = new Innovation("Ammonia", "A pungent, bilious substance " +
+                "ideal for crafting leather and treating wounds.", "science",
+                "language", 0);
         card.addEffect(createDepartingSurvivalEffect());
         return card;
     }
 
+    //TO-DO Add Survival Action
+    public static Innovation createPaintInnovation() {
+        Innovation card = new Innovation("Paint", "The settlement swells with " +
+                "creative energy. All survivors gain the <b>Dash</b> survival action.",
+                "art", "language", 0);
+        return card;
+    }
 
+    //TO-DO Add Effects
+    public static Innovation createSongOfTheBraveInnovation() {
+        Innovation card = new Innovation("Song of the Brave", null, "music",
+                "drums", 0);
+        return card;
+    }
+
+    //TO-DO Add Events
+    public static Innovation createScupltureInnovation() {
+        Innovation card = new Innovation("Sculpture", null, "art",
+                "paint", 0);
+        return card;
+    }
+
+    //TO-DO Add Effects
+    public static Innovation createPictographInnovation() {
+        Innovation card = new Innovation("Pictograph", null, "art",
+                "paint", 0);
+        return card;
+    }
+
+    //TO-DO Add Effects
+    public static Innovation createBarbaricInnovation() {
+        Innovation card = new Innovation("Barbaric", "Believe in the power of human " +
+                "strength to overcome any obstacle", "conviction principle",
+                null, 1);
+        return card;
+    }
+
+    //TO-DO add event
+    public static Innovation createScrapSmeltingInnovation() {
+        Innovation card = new Innovation("Scrap Smelting", null,
+                "science", "lantern oven", 0);
+        return card;
+    }
+
+    //TODO add event
+    public static Innovation createCookingInnovation() {
+        Innovation card = new Innovation("Cooking", null, "science",
+                "lantern oven", 1);
+        return card;
+    }
+
+    //TODO add effect
+    public static Innovation createSurvivalOfTheFittest() {
+        Innovation card = new Innovation("Survival of the Fittest", null,
+                "new life principle",null,1);
+        return card;
+    }
+
+    //TODO add unlock
+    public static Innovation createLanternOvenInnovation() {
+        Innovation card = new Innovation("Lantern Oven", "By agitating lanterns, a " +
+                "source of <b>Heat</b> becomes available to the settlement.", "science",
+                "ammonia", 0);
+        card.addEffect(createDepartingSurvivalEffect());
+        return card;
+    }
+
+    //TODO add event
+    public static Innovation createGuidepostInnovation() {
+        Innovation card = new Innovation("Guidepost", "The soft glow of its light " +
+                "fills the survivors with a sense of security.", "other",
+                null, 0);
+        card.addEffect(createDepartingSurvivalEffect());
+        return card;
+    }
+
+    //TODO Add Events
+    public static Innovation createRecordsInnovation() {
+        Innovation card = new Innovation("Records", null, "education",
+                "storytelling", 0);
+        return card;
+    }
+
+    //TODO Add Events
+    public static Innovation createStorytellingInnovation() {
+        Innovation card = new Innovation("Storytelling", null, "education",
+                "symposium", 1);
+        return card;
+    }
+
+    //TODO Add Events
+    public static Innovation createMomentoMoriInnovation() {
+        Innovation card = new Innovation("Momentor Mori", null, "art",
+                "pictograph", 0);
+        return card;
+    }
+
+    //TODO Add Events
+    public static Innovation createPotteryInnovation() {
+        Innovation card = new Innovation("Pottery", null, "art",
+                "sculpture", 1);
+        return card;
+    }
+
+    //TODO Add Events
+    public static Innovation createHeartFluteInnovation() {
+        Innovation card = new Innovation("Heart Flute", null, "music",
+                "forbidden dance", 0);
+        return card;
+    }
+
+    //TODO Add Ability
+    public static Innovation createDestinyInnovation() {
+        Innovation card = new Innovation("Destiny", "The settlement's future is " +
+                "unavoidable. All Survivors gain the <b>Endure</b> surival action.",
+                "faith", null, 1);
+        return card;
+    }
+
+    //TODO Add Effect
+    public static Innovation createUltimateWeaponInnovation() {
+        Innovation card = new Innovation("Ultimate Weapon", null, "science",
+                null, 1);
+        return card;
+    }
+
+    //TODO Add Effect
+    public static Innovation createFinalFightingArtInnovation() {
+        Innovation card = new Innovation("Final Fighting Art", null,
+                "education", null, 1);
+        return card;
+    }
+
+    //TODO Add Event
+    public static Innovation createSacrificeInnovation() {
+        Innovation card = new Innovation("Sacrifice", null, "faith",
+                "shrine", 0);
+        return card;
+    }
+
+    //TODO Add Event
+    public static Innovation createNightmareTrainingInnovation() {
+        Innovation card = new Innovation("Nightmare Training", null,
+                "education", "symposium", 0);
+        return card;
+    }
+
+    //TODO Add Effect
+    public static Innovation createCannibalizeInnovation() {
+        Innovation card = new Innovation("Cannibalize", null,
+                "death principle", null, 1);
+        return card;
+    }
+
+    //TODO Add Effect
+    public static Innovation createAcceptDarknessInnovation() {
+        Innovation card = new Innovation("Accept Darkness", "The settlement no " +
+                "longer fears the darkness. Letting go means your resolve cannot be cracked",
+                "society principle", null, 0);
+        return card;
+    }
+
+    //TODO Add Effect
+    public static Innovation createCollectiveToilInnovation() {
+        Innovation card = new Innovation("Collective Toil", "Your settlement leans " +
+                "into the storm. If everyone holds strong, you will triumph.",
+                "society principle", null, 0);
+        return card;
+    }
+
+    //TODO Add Effect
+    public static Innovation createRomanticInnovation() {
+        Innovation card = new Innovation("Romantic", "Believe in the potential for " +
+                "beauty, decency, and ingenuity in others.", "conviction principle",
+                null, 0);
+        return card;
+    }
 
     public static Effect createDepartingSurvivalEffect() {
         return new Effect(Effect.GamePhase.HUNT, "<b>Departing Survivors</b> gain +{{v}} survival", 1);

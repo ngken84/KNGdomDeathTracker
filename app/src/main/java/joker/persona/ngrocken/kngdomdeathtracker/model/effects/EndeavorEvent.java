@@ -8,6 +8,7 @@ public class EndeavorEvent {
 
     private int endeavorCost;
     private String description;
+    private String condition;
     private List<RollResult> resultList = new LinkedList<>();
 
 
@@ -38,5 +39,13 @@ public class EndeavorEvent {
             resultList.add(result);
         }
         Collections.sort(resultList, new RollResult.RollResultComparator());
+    }
+
+    public String getCondition() {
+        return condition;
+    }
+
+    public void setCondition(String condition) {
+        this.condition = condition;
     }
 }
